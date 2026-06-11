@@ -2914,7 +2914,7 @@
     {
       "code": "NU1605",
       "level": "Error",
-      "message": "Aviso como Erro: Downgrade de pacote detectado: Microsoft.EntityFrameworkCore.Design de 9.0.15 para 9.0.0. Referencie o pacote diretamente do projeto para selecionar uma versão diferente. \r\n SalaReservaApi -> Microsoft.EntityFrameworkCore.Tools 10.0.9 -> Microsoft.EntityFrameworkCore.Design (>= 9.0.15) \r\n SalaReservaApi -> Microsoft.EntityFrameworkCore.Design (>= 9.0.0)",
+      "message": "Warning As Error: Detected package downgrade: Microsoft.EntityFrameworkCore.Design from 9.0.15 to 9.0.0. Reference the package directly from the project to select a different version. \r\n SalaReservaApi -> Microsoft.EntityFrameworkCore.Tools 10.0.9 -> Microsoft.EntityFrameworkCore.Design (>= 9.0.15) \r\n SalaReservaApi -> Microsoft.EntityFrameworkCore.Design (>= 9.0.0)",
       "libraryId": "Microsoft.EntityFrameworkCore.Design",
       "targetGraphs": [
         "net9.0"
