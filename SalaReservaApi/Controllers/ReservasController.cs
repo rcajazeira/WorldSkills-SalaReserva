@@ -11,7 +11,7 @@ namespace SalaReservaApi.Controllers;
 public class ReservasController : ControllerBase
 {
     private readonly AppDbContext _context;
-    private readonly IReservaService _reservaService; // Injetando nosso cérebro!
+    private readonly IReservaService _reservaService;
 
     public ReservasController(AppDbContext context, IReservaService reservaService)
     {
@@ -22,22 +22,27 @@ public class ReservasController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Reserva>>> GetReservas()
     {
-        // Include traz os dados da Sala junto com a Reserva
-        return await _context.Reservas.Include(r => r.Sala).ToListAsync(); 
+        var reservas = await _context.Reservas
+            .Include(r => r.Sala)
+            .ToListAsync();
+        
+        return Ok(reservas);
     }
 
     [HttpGet("{id}")]
     public async Task<ActionResult<Reserva>> GetReserva(int id)
     {
-        var reserva = await _context.Reservas.Include(r => r.Sala).FirstOrDefaultAsync(r => r.Id == id);
+        var reserva = await _context.Reservas
+            .Include(r => r.Sala)
+            .FirstOrDefaultAsync(r => r.Id == id);
+        
         if (reserva == null) return NotFound();
-        return reserva;
+        return Ok(reserva);
     }
 
     [HttpPost]
     public async Task<ActionResult<Reserva>> PostReserva(Reserva reserva)
     {
-        // 1. Validar conflito ANTES de salvar
         bool disponivel = await _reservaService.IsSalaDisponivel(
             reserva.SalaId, reserva.DataInicio, reserva.DataFim);
 
@@ -46,7 +51,6 @@ public class ReservasController : ControllerBase
             return BadRequest(new { mensagem = "Conflito de horário! A sala já está reservada neste período." });
         }
 
-        // 2. Se não houver conflito, salva
         _context.Reservas.Add(reserva);
         await _context.SaveChangesAsync();
 
@@ -58,7 +62,6 @@ public class ReservasController : ControllerBase
     {
         if (id != reserva.Id) return BadRequest();
 
-        // 1. Validar conflito, IGNORANDO a própria reserva que estamos editando
         bool disponivel = await _reservaService.IsSalaDisponivel(
             reserva.SalaId, reserva.DataInicio, reserva.DataFim, id);
 

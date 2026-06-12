@@ -19,14 +19,12 @@ public class SalasController : ControllerBase
         _reservaService = reservaService;
     }
 
-    // GET: api/salas
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Sala>>> GetSalas()
     {
         return await _context.Salas.ToListAsync();
     }
 
-    // GET: api/salas/5
     [HttpGet("{id}")]
     public async Task<ActionResult<Sala>> GetSala(int id)
     {
@@ -35,7 +33,6 @@ public class SalasController : ControllerBase
         return sala;
     }
 
-    // POST: api/salas
     [HttpPost]
     public async Task<ActionResult<Sala>> PostSala(Sala sala)
     {
@@ -44,7 +41,6 @@ public class SalasController : ControllerBase
         return CreatedAtAction(nameof(GetSala), new { id = sala.Id }, sala);
     }
 
-    // PUT: api/salas/5
     [HttpPut("{id}")]
     public async Task<IActionResult> PutSala(int id, Sala sala)
     {
@@ -54,7 +50,6 @@ public class SalasController : ControllerBase
         return NoContent();
     }
 
-    // DELETE: api/salas/5
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteSala(int id)
     {
@@ -65,7 +60,6 @@ public class SalasController : ControllerBase
         return NoContent();
     }
 
-    // GET: api/salas/disponiveis?dataInicio=2026-06-11T08:00:00&dataFim=2026-06-11T10:00:00
     [HttpGet("disponiveis")]
     public async Task<ActionResult<IEnumerable<Sala>>> GetSalasDisponiveis(
         [FromQuery] DateTime dataInicio, 

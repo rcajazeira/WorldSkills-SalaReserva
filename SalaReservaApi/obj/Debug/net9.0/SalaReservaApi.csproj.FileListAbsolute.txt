@@ -1,13 +1,6 @@
-C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\SalaReservaApi.csproj.AssemblyReference.cache
-C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\SalaReservaApi.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\SalaReservaApi.AssemblyInfoInputs.cache
-C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\SalaReservaApi.AssemblyInfo.cs
-C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\SalaReservaApi.csproj.CoreCompileInputs.cache
-C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\SalaReservaApi.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\SalaReservaApi.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\SalaReservaApi.sourcelink.json
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\bin\Debug\net9.0\appsettings.json
+C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\bin\Debug\net9.0\SalaReservaApi.staticwebassets.runtime.json
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\bin\Debug\net9.0\SalaReservaApi.staticwebassets.endpoints.json
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\bin\Debug\net9.0\SalaReservaApi.exe
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\bin\Debug\net9.0\SalaReservaApi.deps.json
@@ -54,6 +47,7 @@ C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\bin\Debug\net9.0\
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\bin\Debug\net9.0\Mono.TextTemplating.dll
+C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\bin\Debug\net9.0\Scalar.AspNetCore.dll
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\bin\Debug\net9.0\System.ClientModel.dll
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\bin\Debug\net9.0\System.CodeDom.dll
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\bin\Debug\net9.0\System.Composition.AttributedModel.dll
@@ -148,7 +142,16 @@ C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\bin\Debug\net9.0\
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\SalaReservaApi.csproj.AssemblyReference.cache
+C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\SalaReservaApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\SalaReservaApi.AssemblyInfoInputs.cache
+C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\SalaReservaApi.AssemblyInfo.cs
+C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\SalaReservaApi.csproj.CoreCompileInputs.cache
+C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\SalaReservaApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\SalaReservaApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\SalaReservaApi.sourcelink.json
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\scopedcss\bundle\SalaReservaApi.styles.css
+C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\compressed\82d73dhb30-t1ind1ye6l.gz
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -164,6 +167,3 @@ C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\SalaReservaApi.pdb
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\SalaReservaApi.genruntimeconfig.cache
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\ref\SalaReservaApi.dll
-C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\bin\Debug\net9.0\Scalar.AspNetCore.dll
-C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\bin\Debug\net9.0\SalaReservaApi.staticwebassets.runtime.json
-C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\compressed\82d73dhb30-ia1r2wjfgx.gz
