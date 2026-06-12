@@ -164,3 +164,4 @@ C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\SalaReservaApi.pdb
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\SalaReservaApi.genruntimeconfig.cache
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\ref\SalaReservaApi.dll
+C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\bin\Debug\net9.0\Scalar.AspNetCore.dll
