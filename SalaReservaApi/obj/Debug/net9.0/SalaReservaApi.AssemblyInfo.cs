@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SalaReservaApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96a825f7a8f7b9c87425347ec55bbd5a0d54bc52")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a81a0dd9deb56484a8b6b29221dd368a52c2077b")]
 [assembly: System.Reflection.AssemblyProductAttribute("SalaReservaApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SalaReservaApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
