@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XPbCO0slO3yzaNYgutHOtNUU9XdmHtA65xGe2bNQ8XU=",
+  "Hash": "TY3Zs6v3MOMQVSkfALP44TOZAjb4jumMVZ2+IXZgtQI=",
   "Source": "SalaReservaApi",
   "BasePath": "_content/SalaReservaApi",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\obj\\Debug\\net9.0\\compressed\\82d73dhb30-onmn0xiyt6.gz",
+      "Identity": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\obj\\Debug\\net9.0\\compressed\\82d73dhb30-ia1r2wjfgx.gz",
       "SourceId": "SalaReservaApi",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/SalaReservaApi",
-      "RelativePath": "index#[.{fingerprint=onmn0xiyt6}]?.html.gz",
+      "RelativePath": "index#[.{fingerprint=ia1r2wjfgx}]?.html.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -31,8 +31,8 @@
       "RelatedAsset": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\wwwroot\\index.html",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "sbofsn8nca",
-      "Integrity": "6MARiWlKRWg0/jNTFYv89GRaz5srV/0H6NS6AvlanS4=",
+      "Fingerprint": "a7he3bsjyc",
+      "Integrity": "lr0CUD5hPG49mvf4QQtYCM76+yo8yZBDNhfcduEwRu8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\wwwroot\\index.html"
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "onmn0xiyt6",
-      "Integrity": "jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14=",
+      "Fingerprint": "ia1r2wjfgx",
+      "Integrity": "SvFizUQntAd+4v7zV/vVl6sB6wvhCUsYFZGC0WzMSx4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
@@ -62,12 +62,12 @@
   "Endpoints": [
     {
       "Route": "index.html",
-      "AssetFile": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\obj\\Debug\\net9.0\\compressed\\82d73dhb30-onmn0xiyt6.gz",
+      "AssetFile": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\obj\\Debug\\net9.0\\compressed\\82d73dhb30-ia1r2wjfgx.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000713775874"
+          "Quality": "0.000512032770"
         }
       ],
       "ResponseHeaders": [
@@ -77,15 +77,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1400"
+          "Value": "1952"
         },
         {
           "Name": "ETag",
-          "Value": "\"6MARiWlKRWg0/jNTFYv89GRaz5srV/0H6NS6AvlanS4=\""
+          "Value": "\"lr0CUD5hPG49mvf4QQtYCM76+yo8yZBDNhfcduEwRu8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 12 Jun 2026 18:14:57 GMT"
+          "Value": "Fri, 12 Jun 2026 18:33:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -105,13 +105,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14=\""
+          "Value": "W/\"SvFizUQntAd+4v7zV/vVl6sB6wvhCUsYFZGC0WzMSx4=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14="
+          "Value": "sha256-SvFizUQntAd+4v7zV/vVl6sB6wvhCUsYFZGC0WzMSx4="
         }
       ]
     },
@@ -126,7 +126,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3970"
+          "Value": "6665"
         },
         {
           "Name": "Content-Type",
@@ -134,11 +134,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14=\""
+          "Value": "\"SvFizUQntAd+4v7zV/vVl6sB6wvhCUsYFZGC0WzMSx4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 12 Jun 2026 18:14:57 GMT"
+          "Value": "Fri, 12 Jun 2026 18:33:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -148,13 +148,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14="
+          "Value": "sha256-SvFizUQntAd+4v7zV/vVl6sB6wvhCUsYFZGC0WzMSx4="
         }
       ]
     },
     {
       "Route": "index.html.gz",
-      "AssetFile": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\obj\\Debug\\net9.0\\compressed\\82d73dhb30-onmn0xiyt6.gz",
+      "AssetFile": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\obj\\Debug\\net9.0\\compressed\\82d73dhb30-ia1r2wjfgx.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -163,7 +163,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1400"
+          "Value": "1952"
         },
         {
           "Name": "Content-Type",
@@ -171,11 +171,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"6MARiWlKRWg0/jNTFYv89GRaz5srV/0H6NS6AvlanS4=\""
+          "Value": "\"lr0CUD5hPG49mvf4QQtYCM76+yo8yZBDNhfcduEwRu8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 12 Jun 2026 18:14:57 GMT"
+          "Value": "Fri, 12 Jun 2026 18:33:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -193,18 +193,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-6MARiWlKRWg0/jNTFYv89GRaz5srV/0H6NS6AvlanS4="
+          "Value": "sha256-lr0CUD5hPG49mvf4QQtYCM76+yo8yZBDNhfcduEwRu8="
         }
       ]
     },
     {
-      "Route": "index.onmn0xiyt6.html",
-      "AssetFile": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\obj\\Debug\\net9.0\\compressed\\82d73dhb30-onmn0xiyt6.gz",
+      "Route": "index.ia1r2wjfgx.html",
+      "AssetFile": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\obj\\Debug\\net9.0\\compressed\\82d73dhb30-ia1r2wjfgx.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000713775874"
+          "Quality": "0.000512032770"
         }
       ],
       "ResponseHeaders": [
@@ -214,15 +214,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1400"
+          "Value": "1952"
         },
         {
           "Name": "ETag",
-          "Value": "\"6MARiWlKRWg0/jNTFYv89GRaz5srV/0H6NS6AvlanS4=\""
+          "Value": "\"lr0CUD5hPG49mvf4QQtYCM76+yo8yZBDNhfcduEwRu8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 12 Jun 2026 18:14:57 GMT"
+          "Value": "Fri, 12 Jun 2026 18:33:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -242,13 +242,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14=\""
+          "Value": "W/\"SvFizUQntAd+4v7zV/vVl6sB6wvhCUsYFZGC0WzMSx4=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "onmn0xiyt6"
+          "Value": "ia1r2wjfgx"
         },
         {
           "Name": "label",
@@ -256,12 +256,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14="
+          "Value": "sha256-SvFizUQntAd+4v7zV/vVl6sB6wvhCUsYFZGC0WzMSx4="
         }
       ]
     },
     {
-      "Route": "index.onmn0xiyt6.html",
+      "Route": "index.ia1r2wjfgx.html",
       "AssetFile": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\wwwroot\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -271,7 +271,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3970"
+          "Value": "6665"
         },
         {
           "Name": "Content-Type",
@@ -279,11 +279,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14=\""
+          "Value": "\"SvFizUQntAd+4v7zV/vVl6sB6wvhCUsYFZGC0WzMSx4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 12 Jun 2026 18:14:57 GMT"
+          "Value": "Fri, 12 Jun 2026 18:33:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -293,7 +293,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "onmn0xiyt6"
+          "Value": "ia1r2wjfgx"
         },
         {
           "Name": "label",
@@ -301,13 +301,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14="
+          "Value": "sha256-SvFizUQntAd+4v7zV/vVl6sB6wvhCUsYFZGC0WzMSx4="
         }
       ]
     },
     {
-      "Route": "index.onmn0xiyt6.html.gz",
-      "AssetFile": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\obj\\Debug\\net9.0\\compressed\\82d73dhb30-onmn0xiyt6.gz",
+      "Route": "index.ia1r2wjfgx.html.gz",
+      "AssetFile": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\obj\\Debug\\net9.0\\compressed\\82d73dhb30-ia1r2wjfgx.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -316,7 +316,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1400"
+          "Value": "1952"
         },
         {
           "Name": "Content-Type",
@@ -324,11 +324,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"6MARiWlKRWg0/jNTFYv89GRaz5srV/0H6NS6AvlanS4=\""
+          "Value": "\"lr0CUD5hPG49mvf4QQtYCM76+yo8yZBDNhfcduEwRu8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 12 Jun 2026 18:14:57 GMT"
+          "Value": "Fri, 12 Jun 2026 18:33:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -346,7 +346,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "onmn0xiyt6"
+          "Value": "ia1r2wjfgx"
         },
         {
           "Name": "label",
@@ -354,7 +354,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-6MARiWlKRWg0/jNTFYv89GRaz5srV/0H6NS6AvlanS4="
+          "Value": "sha256-lr0CUD5hPG49mvf4QQtYCM76+yo8yZBDNhfcduEwRu8="
         }
       ]
     }

@@ -4,143 +4,216 @@
     <meta charset="UTF-8">
     <title>Reserva de Salas - WorldSkills</title>
     <style>
-        body { font-family: Arial, sans-serif; max-width: 1000px; margin: 20px auto; padding: 20px; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #f2f2f2; }
+        body { font-family: Arial, sans-serif; max-width: 1200px; margin: 20px auto; padding: 20px; background-color: #f5f5f5; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #007bff; color: white; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        tr:hover { background-color: #f1f1f1; }
         .form-group { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; font-weight: bold; }
-        input, select { width: 100%; padding: 8px; box-sizing: border-box; }
-        button { padding: 10px 15px; background-color: #007bff; color: white; border: none; cursor: pointer; margin-right: 5px; }
-        button:hover { background-color: #0056b3; }
-        button.delete { background-color: #dc3545; }
-        button.delete:hover { background-color: #a71d2a; }
-        .error { color: red; font-weight: bold; }
-        .success { color: green; font-weight: bold; }
-        h2 { margin-top: 30px; border-bottom: 2px solid #007bff; padding-bottom: 10px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #333; }
+        input, select { width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 4px; }
+        button { padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; margin-right: 5px; font-weight: bold; }
+        button[type="submit"] { background-color: #28a745; color: white; }
+        button[type="submit"]:hover { background-color: #218838; }
+        button.edit { background-color: #ffc107; color: #000; }
+        button.edit:hover { background-color: #e0a800; }
+        button.delete { background-color: #dc3545; color: white; }
+        button.delete:hover { background-color: #c82333; }
+        button.cancel { background-color: #6c757d; color: white; }
+        button.cancel:hover { background-color: #5a6268; }
+        .error { color: #dc3545; font-weight: bold; background: #f8d7da; padding: 10px; border-radius: 4px; margin-top: 10px; }
+        .success { color: #28a745; font-weight: bold; background: #d4edda; padding: 10px; border-radius: 4px; margin-top: 10px; }
+        h1 { color: #007bff; border-bottom: 3px solid #007bff; padding-bottom: 10px; }
+        h2 { color: #333; margin-top: 30px; border-bottom: 2px solid #007bff; padding-bottom: 10px; }
+        .container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .actions { display: flex; gap: 5px; }
     </style>
 </head>
 <body>
     <h1>🏢 Sistema de Reserva de Salas</h1>
 
-    <h2>📋 Salas Cadastradas</h2>
-    <table id="tabelaSalas">
-        <thead><tr><th>ID</th><th>Nome</th><th>Capacidade</th></tr></thead>
-        <tbody></tbody>
-    </table>
+    <div class="container">
+        <h2>📋 Salas Cadastradas</h2>
+        <table id="tabelaSalas">
+            <thead><tr><th>ID</th><th>Nome</th><th>Capacidade</th></tr></thead>
+            <tbody><tr><td colspan="3" style="text-align: center;">Carregando...</td></tr></tbody>
+        </table>
+    </div>
 
-    <h2>📅 Reservas Agendadas</h2>
-    <table id="tabelaReservas">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Sala</th>
-                <th>Responsável</th>
-                <th>Início</th>
-                <th>Fim</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+    <div class="container">
+        <h2>📅 Reservas Agendadas</h2>
+        <table id="tabelaReservas">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Sala</th>
+                    <th>Responsável</th>
+                    <th>Início</th>
+                    <th>Fim</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody><tr><td colspan="6" style="text-align: center;">Carregando...</td></tr></tbody>
+        </table>
+    </div>
 
-    <h2>➕ Nova Reserva</h2>
-    <form id="formReserva">
-        <div class="form-group">
-            <label>Sala:</label>
-            <select id="salaId" required></select>
-        </div>
-        <div class="form-group">
-            <label>Responsável:</label>
-            <input type="text" id="responsavel" required>
-        </div>
-        <div class="form-group">
-            <label>Início:</label>
-            <input type="datetime-local" id="dataInicio" required>
-        </div>
-        <div class="form-group">
-            <label>Fim:</label>
-            <input type="datetime-local" id="dataFim" required>
-        </div>
-        <button type="submit">Reservar</button>
-        <p id="mensagem"></p>
-    </form>
+    <div class="container">
+        <h2 id="tituloForm">➕ Nova Reserva</h2>
+        <form id="formReserva">
+            <input type="hidden" id="reservaId">
+            <div class="form-group">
+                <label>Sala:</label>
+                <select id="salaId" required></select>
+            </div>
+            <div class="form-group">
+                <label>Responsável:</label>
+                <input type="text" id="responsavel" required>
+            </div>
+            <div class="form-group">
+                <label>Início:</label>
+                <input type="datetime-local" id="dataInicio" required>
+            </div>
+            <div class="form-group">
+                <label>Fim:</label>
+                <input type="datetime-local" id="dataFim" required>
+            </div>
+            <button type="submit" id="btnSalvar">💾 Salvar</button>
+            <button type="button" class="cancel" id="btnCancelar" style="display: none;" onclick="cancelarEdicao()">❌ Cancelar</button>
+            <div id="mensagem"></div>
+        </form>
+    </div>
 
     <script>
         const apiUrl = '/api';
 
         // Carregar Salas
         async function carregarSalas() {
-            const response = await fetch(`${apiUrl}/salas`);
-            const salas = await response.json();
-            
-            const tbody = document.querySelector('#tabelaSalas tbody');
-            const select = document.getElementById('salaId');
-            
-            tbody.innerHTML = '';
-            select.innerHTML = '<option value="">Selecione...</option>';
+            try {
+                const response = await fetch(`${apiUrl}/salas`);
+                const salas = await response.json();
+                
+                const tbody = document.querySelector('#tabelaSalas tbody');
+                const select = document.getElementById('salaId');
+                
+                tbody.innerHTML = '';
+                select.innerHTML = '<option value="">Selecione...</option>';
 
-            salas.forEach(sala => {
-                tbody.innerHTML += `<tr><td>${sala.id}</td><td>${sala.nome}</td><td>${sala.capacidade}</td></tr>`;
-                select.innerHTML += `<option value="${sala.id}">${sala.nome}</option>`;
-            });
+                if (salas.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="3" style="text-align: center;">Nenhuma sala cadastrada</td></tr>';
+                    return;
+                }
+
+                salas.forEach(sala => {
+                    tbody.innerHTML += `<tr><td>${sala.id}</td><td>${sala.nome}</td><td>${sala.capacidade}</td></tr>`;
+                    select.innerHTML += `<option value="${sala.id}">${sala.nome}</option>`;
+                });
+            } catch (error) {
+                console.error('Erro ao carregar salas:', error);
+                mostrarMensagem('Erro ao carregar salas', 'error');
+            }
         }
 
         // Carregar Reservas
         async function carregarReservas() {
-            const response = await fetch(`${apiUrl}/reservas`);
-            const reservas = await response.json();
-            
-            const tbody = document.querySelector('#tabelaReservas tbody');
-            tbody.innerHTML = '';
-
-            if (reservas.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="6" style="text-align: center;">Nenhuma reserva agendada</td></tr>';
-                return;
-            }
-
-            reservas.forEach(reserva => {
-                const dataInicio = new Date(reserva.dataInicio).toLocaleString('pt-BR');
-                const dataFim = new Date(reserva.dataFim).toLocaleString('pt-BR');
-                const nomeSala = reserva.sala ? reserva.sala.nome : `Sala ${reserva.salaId}`;
+            try {
+                const response = await fetch(`${apiUrl}/reservas`);
+                const reservas = await response.json();
                 
-                tbody.innerHTML += `
-                    <tr>
-                        <td>${reserva.id}</td>
-                        <td>${nomeSala}</td>
-                        <td>${reserva.responsavel}</td>
-                        <td>${dataInicio}</td>
-                        <td>${dataFim}</td>
-                        <td>
-                            <button class="delete" onclick="deletarReserva(${reserva.id})">Excluir</button>
-                        </td>
-                    </tr>
-                `;
-            });
+                const tbody = document.querySelector('#tabelaReservas tbody');
+                tbody.innerHTML = '';
+
+                if (reservas.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="6" style="text-align: center;">Nenhuma reserva agendada</td></tr>';
+                    return;
+                }
+
+                reservas.forEach(reserva => {
+                    const dataInicio = new Date(reserva.dataInicio).toLocaleString('pt-BR');
+                    const dataFim = new Date(reserva.dataFim).toLocaleString('pt-BR');
+                    const nomeSala = reserva.sala ? reserva.sala.nome : `Sala ${reserva.salaId}`;
+                    
+                    tbody.innerHTML += `
+                        <tr>
+                            <td>${reserva.id}</td>
+                            <td>${nomeSala}</td>
+                            <td>${reserva.responsavel}</td>
+                            <td>${dataInicio}</td>
+                            <td>${dataFim}</td>
+                            <td class="actions">
+                                <button class="edit" onclick="editarReserva(${reserva.id})">✏️ Editar</button>
+                                <button class="delete" onclick="deletarReserva(${reserva.id})">🗑️ Excluir</button>
+                            </td>
+                        </tr>
+                    `;
+                });
+            } catch (error) {
+                console.error('Erro ao carregar reservas:', error);
+                mostrarMensagem('Erro ao carregar reservas', 'error');
+            }
+        }
+
+        // Editar Reserva
+        async function editarReserva(id) {
+            try {
+                const response = await fetch(`${apiUrl}/reservas/${id}`);
+                const reserva = await response.json();
+                
+                document.getElementById('reservaId').value = reserva.id;
+                document.getElementById('salaId').value = reserva.salaId;
+                document.getElementById('responsavel').value = reserva.responsavel;
+                document.getElementById('dataInicio').value = reserva.dataInicio.substring(0, 16);
+                document.getElementById('dataFim').value = reserva.dataFim.substring(0, 16);
+                
+                document.getElementById('tituloForm').textContent = '✏️ Editar Reserva';
+                document.getElementById('btnSalvar').textContent = '💾 Atualizar';
+                document.getElementById('btnCancelar').style.display = 'inline-block';
+                
+                window.scrollTo(0, document.getElementById('formReserva').offsetTop);
+            } catch (error) {
+                console.error('Erro ao carregar reserva para edição:', error);
+                mostrarMensagem('Erro ao carregar reserva', 'error');
+            }
+        }
+
+        // Cancelar Edição
+        function cancelarEdicao() {
+            document.getElementById('reservaId').value = '';
+            document.getElementById('formReserva').reset();
+            document.getElementById('tituloForm').textContent = '➕ Nova Reserva';
+            document.getElementById('btnSalvar').textContent = '💾 Salvar';
+            document.getElementById('btnCancelar').style.display = 'none';
+            document.getElementById('mensagem').innerHTML = '';
         }
 
         // Deletar Reserva
         async function deletarReserva(id) {
             if (!confirm('Deseja realmente excluir esta reserva?')) return;
 
-            const response = await fetch(`${apiUrl}/reservas/${id}`, {
-                method: 'DELETE'
-            });
+            try {
+                const response = await fetch(`${apiUrl}/reservas/${id}`, {
+                    method: 'DELETE'
+                });
 
-            if (response.ok || response.status === 204) {
-                carregarReservas(); // Recarrega a lista
-            } else {
-                alert('Erro ao excluir reserva');
+                if (response.ok || response.status === 204) {
+                    mostrarMensagem('Reserva excluída com sucesso!', 'success');
+                    carregarReservas();
+                } else {
+                    mostrarMensagem('Erro ao excluir reserva', 'error');
+                }
+            } catch (error) {
+                console.error('Erro ao deletar reserva:', error);
+                mostrarMensagem('Erro ao excluir reserva', 'error');
             }
         }
 
-        // Criar Reserva
+        // Criar/Atualizar Reserva
         document.getElementById('formReserva').addEventListener('submit', async (e) => {
             e.preventDefault();
-            const msg = document.getElementById('mensagem');
-            msg.className = '';
-            msg.innerText = '';
-
+            
+            const reservaId = document.getElementById('reservaId').value;
+            const isEdicao = reservaId !== '';
+            
             const dados = {
                 salaId: parseInt(document.getElementById('salaId').value),
                 responsavel: document.getElementById('responsavel').value,
@@ -148,27 +221,42 @@
                 dataFim: document.getElementById('dataFim').value
             };
 
-            const response = await fetch(`${apiUrl}/reservas`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(dados)
-            });
+            try {
+                const response = await fetch(`${apiUrl}/reservas${isEdicao ? '/' + reservaId : ''}`, {
+                    method: isEdicao ? 'PUT' : 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(dados)
+                });
 
-            if (response.ok) {
-                msg.className = 'success';
-                msg.innerText = 'Reserva criada com sucesso!';
-                e.target.reset();
-                carregarReservas(); // Recarrega a lista de reservas
-            } else {
-                const erro = await response.json();
-                msg.className = 'error';
-                msg.innerText = `Erro: ${erro.mensagem || 'Verifique os dados.'}`;
+                if (response.ok) {
+                    const acao = isEdicao ? 'atualizada' : 'criada';
+                    mostrarMensagem(`Reserva ${acao} com sucesso!`, 'success');
+                    cancelarEdicao();
+                    carregarReservas();
+                } else {
+                    const erro = await response.json();
+                    mostrarMensagem(`Erro: ${erro.mensagem || 'Verifique os dados.'}`, 'error');
+                }
+            } catch (error) {
+                console.error('Erro ao salvar reserva:', error);
+                mostrarMensagem('Erro ao salvar reserva', 'error');
             }
         });
 
+        // Mostrar Mensagem
+        function mostrarMensagem(texto, tipo) {
+            const msg = document.getElementById('mensagem');
+            msg.className = tipo;
+            msg.innerText = texto;
+            setTimeout(() => {
+                msg.innerHTML = '';
+                msg.className = '';
+            }, 5000);
+        }
+
         // Iniciar
         carregarSalas();
-        carregarReservas(); // Carrega as reservas ao iniciar
+        carregarReservas();
     </script>
 </body>
 </html>

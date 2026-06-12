@@ -166,4 +166,4 @@ C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\ref\SalaReservaApi.dll
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\bin\Debug\net9.0\Scalar.AspNetCore.dll
 C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\bin\Debug\net9.0\SalaReservaApi.staticwebassets.runtime.json
-C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\compressed\82d73dhb30-onmn0xiyt6.gz
+C:\Users\wds\Documents\rafael_leite\WorldSkills\SalaReservaApi\obj\Debug\net9.0\compressed\82d73dhb30-ia1r2wjfgx.gz

@@ -3,14 +3,14 @@
     <StaticWebAssetEndpoint Include="_content/SalaReservaApi/index.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3970"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14=\u0022"},{"Name":"Last-Modified","Value":"Fri, 12 Jun 2026 18:14:57 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-SvFizUQntAd\u002B4v7zV/vVl6sB6wvhCUsYFZGC0WzMSx4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"6665"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022SvFizUQntAd\u002B4v7zV/vVl6sB6wvhCUsYFZGC0WzMSx4=\u0022"},{"Name":"Last-Modified","Value":"Fri, 12 Jun 2026 18:33:48 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/SalaReservaApi/index.onmn0xiyt6.html">
+    <StaticWebAssetEndpoint Include="_content/SalaReservaApi/index.ia1r2wjfgx.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"onmn0xiyt6"},{"Name":"integrity","Value":"sha256-jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14="},{"Name":"label","Value":"_content/SalaReservaApi/index.html"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3970"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14=\u0022"},{"Name":"Last-Modified","Value":"Fri, 12 Jun 2026 18:14:57 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ia1r2wjfgx"},{"Name":"integrity","Value":"sha256-SvFizUQntAd\u002B4v7zV/vVl6sB6wvhCUsYFZGC0WzMSx4="},{"Name":"label","Value":"_content/SalaReservaApi/index.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6665"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022SvFizUQntAd\u002B4v7zV/vVl6sB6wvhCUsYFZGC0WzMSx4=\u0022"},{"Name":"Last-Modified","Value":"Fri, 12 Jun 2026 18:33:48 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>
