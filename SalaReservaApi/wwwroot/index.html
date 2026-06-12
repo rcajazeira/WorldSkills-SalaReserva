@@ -35,9 +35,27 @@
 
     <div class="container">
         <h2>📋 Salas Cadastradas</h2>
+        <button onclick="mostrarFormSala()" style="background: #007bff; color: white; margin-bottom: 15px;">➕ Nova Sala</button>
+        
+        <div id="formSalaContainer" style="display: none; background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+            <form id="formSala">
+                <input type="hidden" id="salaIdEdit">
+                <div class="form-group">
+                    <label>Nome da Sala:</label>
+                    <input type="text" id="nomeSala" required>
+                </div>
+                <div class="form-group">
+                    <label>Capacidade:</label>
+                    <input type="number" id="capacidadeSala" required min="1">
+                </div>
+                <button type="submit">💾 Salvar Sala</button>
+                <button type="button" class="cancel" onclick="esconderFormSala()">❌ Cancelar</button>
+            </form>
+        </div>
+
         <table id="tabelaSalas">
-            <thead><tr><th>ID</th><th>Nome</th><th>Capacidade</th></tr></thead>
-            <tbody><tr><td colspan="3" style="text-align: center;">Carregando...</td></tr></tbody>
+            <thead><tr><th>ID</th><th>Nome</th><th>Capacidade</th><th>Ações</th></tr></thead>
+            <tbody><tr><td colspan="4" style="text-align: center;">Carregando...</td></tr></tbody>
         </table>
     </div>
 
@@ -87,7 +105,19 @@
     <script>
         const apiUrl = '/api';
 
-        // Carregar Salas
+        // ========== FUNÇÕES DE SALA ==========
+        
+        function mostrarFormSala() {
+            document.getElementById('formSalaContainer').style.display = 'block';
+            document.getElementById('salaIdEdit').value = '';
+            document.getElementById('nomeSala').value = '';
+            document.getElementById('capacidadeSala').value = '';
+        }
+
+        function esconderFormSala() {
+            document.getElementById('formSalaContainer').style.display = 'none';
+        }
+
         async function carregarSalas() {
             try {
                 const response = await fetch(`${apiUrl}/salas`);
@@ -100,12 +130,21 @@
                 select.innerHTML = '<option value="">Selecione...</option>';
 
                 if (salas.length === 0) {
-                    tbody.innerHTML = '<tr><td colspan="3" style="text-align: center;">Nenhuma sala cadastrada</td></tr>';
+                    tbody.innerHTML = '<tr><td colspan="4" style="text-align: center;">Nenhuma sala cadastrada</td></tr>';
                     return;
                 }
 
                 salas.forEach(sala => {
-                    tbody.innerHTML += `<tr><td>${sala.id}</td><td>${sala.nome}</td><td>${sala.capacidade}</td></tr>`;
+                    tbody.innerHTML += `
+                        <tr>
+                            <td>${sala.id}</td>
+                            <td>${sala.nome}</td>
+                            <td>${sala.capacidade}</td>
+                            <td class="actions">
+                                <button class="edit" onclick="editarSala(${sala.id}, '${sala.nome}', ${sala.capacidade})">✏️ Editar</button>
+                                <button class="delete" onclick="deletarSala(${sala.id})">🗑️ Excluir</button>
+                            </td>
+                        </tr>`;
                     select.innerHTML += `<option value="${sala.id}">${sala.nome}</option>`;
                 });
             } catch (error) {
@@ -114,7 +153,70 @@
             }
         }
 
-        // Carregar Reservas
+        async function editarSala(id, nome, capacidade) {
+            mostrarFormSala();
+            document.getElementById('salaIdEdit').value = id;
+            document.getElementById('nomeSala').value = nome;
+            document.getElementById('capacidadeSala').value = capacidade;
+        }
+
+        async function deletarSala(id) {
+            if (!confirm('Deseja realmente excluir esta sala?')) return;
+
+            try {
+                const response = await fetch(`${apiUrl}/salas/${id}`, {
+                    method: 'DELETE'
+                });
+
+                if (response.ok || response.status === 204) {
+                    mostrarMensagem('Sala excluída com sucesso!', 'success');
+                    carregarSalas();
+                    carregarReservas();
+                } else {
+                    mostrarMensagem('Erro ao excluir sala', 'error');
+                }
+            } catch (error) {
+                console.error('Erro ao deletar sala:', error);
+                mostrarMensagem('Erro ao excluir sala', 'error');
+            }
+        }
+
+        // Salvar Sala (Criar ou Atualizar)
+        document.getElementById('formSala').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const salaId = document.getElementById('salaIdEdit').value;
+            const isEdicao = salaId !== '';
+            
+            const dados = {
+                id: isEdicao ? parseInt(salaId) : 0,
+                nome: document.getElementById('nomeSala').value,
+                capacidade: parseInt(document.getElementById('capacidadeSala').value)
+            };
+
+            try {
+                const response = await fetch(`${apiUrl}/salas${isEdicao ? '/' + salaId : ''}`, {
+                    method: isEdicao ? 'PUT' : 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(dados)
+                });
+
+                if (response.ok) {
+                    const acao = isEdicao ? 'atualizada' : 'criada';
+                    mostrarMensagem(`Sala ${acao} com sucesso!`, 'success');
+                    esconderFormSala();
+                    carregarSalas();
+                } else {
+                    mostrarMensagem('Erro ao salvar sala', 'error');
+                }
+            } catch (error) {
+                console.error('Erro ao salvar sala:', error);
+                mostrarMensagem('Erro ao salvar sala', 'error');
+            }
+        });
+
+        // ========== FUNÇÕES DE RESERVA ==========
+        
         async function carregarReservas() {
             try {
                 const response = await fetch(`${apiUrl}/reservas`);
@@ -153,7 +255,6 @@
             }
         }
 
-        // Editar Reserva
         async function editarReserva(id) {
             try {
                 const response = await fetch(`${apiUrl}/reservas/${id}`);
@@ -176,7 +277,6 @@
             }
         }
 
-        // Cancelar Edição
         function cancelarEdicao() {
             document.getElementById('reservaId').value = '';
             document.getElementById('formReserva').reset();
@@ -186,7 +286,6 @@
             document.getElementById('mensagem').innerHTML = '';
         }
 
-        // Deletar Reserva
         async function deletarReserva(id) {
             if (!confirm('Deseja realmente excluir esta reserva?')) return;
 
@@ -207,7 +306,6 @@
             }
         }
 
-        // Criar/Atualizar Reserva
         document.getElementById('formReserva').addEventListener('submit', async (e) => {
             e.preventDefault();
             
@@ -243,7 +341,6 @@
             }
         });
 
-        // Mostrar Mensagem
         function mostrarMensagem(texto, tipo) {
             const msg = document.getElementById('mensagem');
             msg.className = tipo;
