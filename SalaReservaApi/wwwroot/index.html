@@ -4,24 +4,43 @@
     <meta charset="UTF-8">
     <title>Reserva de Salas - WorldSkills</title>
     <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: 20px auto; padding: 20px; }
+        body { font-family: Arial, sans-serif; max-width: 1000px; margin: 20px auto; padding: 20px; }
         table { width: 100%; border-collapse: collapse; margin-top: 20px; }
         th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
         th { background-color: #f2f2f2; }
         .form-group { margin-bottom: 15px; }
         label { display: block; margin-bottom: 5px; font-weight: bold; }
         input, select { width: 100%; padding: 8px; box-sizing: border-box; }
-        button { padding: 10px 15px; background-color: #007bff; color: white; border: none; cursor: pointer; }
+        button { padding: 10px 15px; background-color: #007bff; color: white; border: none; cursor: pointer; margin-right: 5px; }
+        button:hover { background-color: #0056b3; }
+        button.delete { background-color: #dc3545; }
+        button.delete:hover { background-color: #a71d2a; }
         .error { color: red; font-weight: bold; }
         .success { color: green; font-weight: bold; }
+        h2 { margin-top: 30px; border-bottom: 2px solid #007bff; padding-bottom: 10px; }
     </style>
 </head>
 <body>
     <h1>🏢 Sistema de Reserva de Salas</h1>
 
-    <h2>📋 Salas Disponíveis</h2>
+    <h2>📋 Salas Cadastradas</h2>
     <table id="tabelaSalas">
         <thead><tr><th>ID</th><th>Nome</th><th>Capacidade</th></tr></thead>
+        <tbody></tbody>
+    </table>
+
+    <h2>📅 Reservas Agendadas</h2>
+    <table id="tabelaReservas">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Sala</th>
+                <th>Responsável</th>
+                <th>Início</th>
+                <th>Fim</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
         <tbody></tbody>
     </table>
 
@@ -67,6 +86,54 @@
             });
         }
 
+        // Carregar Reservas
+        async function carregarReservas() {
+            const response = await fetch(`${apiUrl}/reservas`);
+            const reservas = await response.json();
+            
+            const tbody = document.querySelector('#tabelaReservas tbody');
+            tbody.innerHTML = '';
+
+            if (reservas.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="6" style="text-align: center;">Nenhuma reserva agendada</td></tr>';
+                return;
+            }
+
+            reservas.forEach(reserva => {
+                const dataInicio = new Date(reserva.dataInicio).toLocaleString('pt-BR');
+                const dataFim = new Date(reserva.dataFim).toLocaleString('pt-BR');
+                const nomeSala = reserva.sala ? reserva.sala.nome : `Sala ${reserva.salaId}`;
+                
+                tbody.innerHTML += `
+                    <tr>
+                        <td>${reserva.id}</td>
+                        <td>${nomeSala}</td>
+                        <td>${reserva.responsavel}</td>
+                        <td>${dataInicio}</td>
+                        <td>${dataFim}</td>
+                        <td>
+                            <button class="delete" onclick="deletarReserva(${reserva.id})">Excluir</button>
+                        </td>
+                    </tr>
+                `;
+            });
+        }
+
+        // Deletar Reserva
+        async function deletarReserva(id) {
+            if (!confirm('Deseja realmente excluir esta reserva?')) return;
+
+            const response = await fetch(`${apiUrl}/reservas/${id}`, {
+                method: 'DELETE'
+            });
+
+            if (response.ok || response.status === 204) {
+                carregarReservas(); // Recarrega a lista
+            } else {
+                alert('Erro ao excluir reserva');
+            }
+        }
+
         // Criar Reserva
         document.getElementById('formReserva').addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -91,6 +158,7 @@
                 msg.className = 'success';
                 msg.innerText = 'Reserva criada com sucesso!';
                 e.target.reset();
+                carregarReservas(); // Recarrega a lista de reservas
             } else {
                 const erro = await response.json();
                 msg.className = 'error';
@@ -100,6 +168,7 @@
 
         // Iniciar
         carregarSalas();
+        carregarReservas(); // Carrega as reservas ao iniciar
     </script>
 </body>
 </html>
