@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using SalaReservaApi.Data;
+using SalaReservaApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,9 +10,12 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-// REGISTRO DO DBCONTEXT (ADICIONE AQUI)
+// REGISTRO DO DBCONTEXT
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// REGISTRO DO SERVICE (ADICIONE AQUI)
+builder.Services.AddScoped<IReservaService, ReservaService>();
 
 var app = builder.Build();
 
