@@ -1,0 +1,16 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/SalaReservaApi/index.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3970"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14=\u0022"},{"Name":"Last-Modified","Value":"Fri, 12 Jun 2026 18:14:57 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SalaReservaApi/index.onmn0xiyt6.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"onmn0xiyt6"},{"Name":"integrity","Value":"sha256-jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14="},{"Name":"label","Value":"_content/SalaReservaApi/index.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3970"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14=\u0022"},{"Name":"Last-Modified","Value":"Fri, 12 Jun 2026 18:14:57 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

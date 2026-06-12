@@ -1,12 +1,362 @@
 {
   "Version": 1,
-  "Hash": "h0o03yeau9+S+I69t0EQF2nwKWln5W+Z1EGzJU+KFNE=",
+  "Hash": "XPbCO0slO3yzaNYgutHOtNUU9XdmHtA65xGe2bNQ8XU=",
   "Source": "SalaReservaApi",
   "BasePath": "_content/SalaReservaApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "SalaReservaApi\\wwwroot",
+      "Source": "SalaReservaApi",
+      "ContentRoot": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\wwwroot\\",
+      "BasePath": "_content/SalaReservaApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\obj\\Debug\\net9.0\\compressed\\82d73dhb30-onmn0xiyt6.gz",
+      "SourceId": "SalaReservaApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/SalaReservaApi",
+      "RelativePath": "index#[.{fingerprint=onmn0xiyt6}]?.html.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\wwwroot\\index.html",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "sbofsn8nca",
+      "Integrity": "6MARiWlKRWg0/jNTFYv89GRaz5srV/0H6NS6AvlanS4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\wwwroot\\index.html",
+      "SourceId": "SalaReservaApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\wwwroot\\",
+      "BasePath": "_content/SalaReservaApi",
+      "RelativePath": "index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "onmn0xiyt6",
+      "Integrity": "jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "index.html",
+      "AssetFile": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\obj\\Debug\\net9.0\\compressed\\82d73dhb30-onmn0xiyt6.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000713775874"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1400"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6MARiWlKRWg0/jNTFYv89GRaz5srV/0H6NS6AvlanS4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 12 Jun 2026 18:14:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3970"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 12 Jun 2026 18:14:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14="
+        }
+      ]
+    },
+    {
+      "Route": "index.html.gz",
+      "AssetFile": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\obj\\Debug\\net9.0\\compressed\\82d73dhb30-onmn0xiyt6.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1400"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6MARiWlKRWg0/jNTFYv89GRaz5srV/0H6NS6AvlanS4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 12 Jun 2026 18:14:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6MARiWlKRWg0/jNTFYv89GRaz5srV/0H6NS6AvlanS4="
+        }
+      ]
+    },
+    {
+      "Route": "index.onmn0xiyt6.html",
+      "AssetFile": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\obj\\Debug\\net9.0\\compressed\\82d73dhb30-onmn0xiyt6.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000713775874"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1400"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6MARiWlKRWg0/jNTFYv89GRaz5srV/0H6NS6AvlanS4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 12 Jun 2026 18:14:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "onmn0xiyt6"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14="
+        }
+      ]
+    },
+    {
+      "Route": "index.onmn0xiyt6.html",
+      "AssetFile": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3970"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 12 Jun 2026 18:14:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "onmn0xiyt6"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jGlXMgr4eVP/cC17SjNFOiVzHArH9TSOo4Z02DHKJ14="
+        }
+      ]
+    },
+    {
+      "Route": "index.onmn0xiyt6.html.gz",
+      "AssetFile": "C:\\Users\\wds\\Documents\\rafael_leite\\WorldSkills\\SalaReservaApi\\obj\\Debug\\net9.0\\compressed\\82d73dhb30-onmn0xiyt6.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1400"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6MARiWlKRWg0/jNTFYv89GRaz5srV/0H6NS6AvlanS4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 12 Jun 2026 18:14:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "onmn0xiyt6"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6MARiWlKRWg0/jNTFYv89GRaz5srV/0H6NS6AvlanS4="
+        }
+      ]
+    }
+  ]
 }
